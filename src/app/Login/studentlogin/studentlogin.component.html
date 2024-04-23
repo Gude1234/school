@@ -1,0 +1,19 @@
+<form (ngSubmit)="onAuth()" #f="ngForm">
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="id">Student Id</label>
+            <input id="id" class="form-control" [(ngModel)]="student.email" name="email" required>
+        </div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="passowrd">Password</label>
+            <input id="password" class="form-control" [(ngModel)]="student.password" name="password" required>
+        </div>
+    </div>
+    &nbsp;
+    <div>
+        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Sign in</button>
+    </div>
+</form>

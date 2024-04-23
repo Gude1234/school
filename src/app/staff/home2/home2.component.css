@@ -1,0 +1,41 @@
+.staffhome{
+    padding: 20px;
+}
+
+.brief{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.list-group-item{
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+a{
+    color: white;
+    cursor: pointer;
+}
+
+.piecharts{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.context{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+}
+
+p{
+    font-size: 17px;
+}
+
+span{
+    margin-left: auto;
+}

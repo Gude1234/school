@@ -1,0 +1,18 @@
+<div>
+    <div class="college">
+        <img src="https://www.nitt.edu/home/about/High-Resolution-Emblem.png">
+        <p style="font-size: 30px;justify-content: baseline;">NITT</p>
+    </div>
+    <hr>
+    <div class="name">
+        <p style="font-size: 20px;"><i class="bi bi-person-circle"></i>&nbsp; {{staff['name']}}</p>
+    </div>
+    <hr>
+    <div class="menu">
+        <p (click)="onHome()"><i class="bi bi-house-door-fill"></i>&nbsp; Home</p>
+        <p (click)="onAttendence()"><i class="bi bi-calendar-check-fill"></i>&nbsp; Take Attendence</p>
+        <p><i class="bi bi-list-check"></i>&nbsp; Add Results</p>
+        <p (click)="onLeave()"><i class="bi bi-backpack4-fill"></i>&nbsp; Apply For Leave</p>
+        <p (click)="onLogout()"><i class="bi bi-box-arrow-in-right"></i>&nbsp; Logout</p>
+    </div>
+</div>

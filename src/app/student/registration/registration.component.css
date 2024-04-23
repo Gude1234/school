@@ -1,0 +1,19 @@
+.registration{
+    padding: 20px;
+}
+
+table{
+    width: 100%;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(23, 162, 183, 1);
+    color: white;
+    border: 0px;
+    font-size: 16px;
+}

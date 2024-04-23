@@ -1,0 +1,12 @@
+.example-container{
+    height: 100%;
+    width: 225px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(53, 58, 64, 1);
+    color: rgba(195, 199, 208, 1);
+    overflow-x: hidden;
+    padding: 20px;
+}

@@ -1,0 +1,42 @@
+.list-group-item{
+    width: 500px;
+    padding: 20px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-save{
+    display: flex;
+    height: 44px;
+    padding: 8px 32px;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 32px;
+    color: white;
+    background: #285DD9;
+    border: 1px solid #285DD9;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.actions{
+    display: flex;
+}
+
+p{
+    margin-bottom: 0px;
+}
+

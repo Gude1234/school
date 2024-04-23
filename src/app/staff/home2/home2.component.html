@@ -1,0 +1,45 @@
+<div class="staffhome">
+    <div class="brief">
+        <a class="list-group-item" style="background-color: rgba(23, 162, 183, 1);" (click)="onStudents()">
+            <div class="context">
+                <div class="content">
+                    <p>Students Under Me</p>
+                    <p>{{registeredStudents.length}}</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(19, 139, 156, 1);"><i class="bi bi-pie-chart-fill"></i></span>
+            </div>
+        </a>
+        <a class="list-group-item" style="background-color: rgba(39, 168, 68, 1);" (click)="onLeave()">
+            <div class="context">
+                <div class="content">
+                    <p>Total Leaves Taken</p>
+                    <p>{{approvedLeaves}}</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(34, 141, 59, 1);"><i class="bi bi-bar-chart-fill"></i></span>
+            </div>
+        </a>
+        <a class="list-group-item" style="background-color: rgba(254, 193, 7, 1);">
+            <div class="context">
+                <div class="content">
+                    <p>Total Leaves Taken</p>
+                    <p>{{registeredStudents.length}}</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(217, 164, 6, 1);"><i class="bi bi-pie-chart-fill"></i></span>
+            </div>
+        </a>
+        <a class="list-group-item" style="background-color: rgba(220, 53, 70, 1);" (click)="onSubjects()">
+            <div class="context">
+                <div class="content">
+                    <p>Total Subjects</p>
+                    <p>{{subjects.length}}</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(187, 45, 59, 1);"><i class="bi bi-pie-chart-fill"></i></span>
+            </div>
+        </a>
+    </div>
+    &nbsp;
+    <div class="piecharts">
+        <div id="pieChart" style="width: 600px;height:400px;"></div>
+        <div id="barChart" style="width: 600px;height:400px;"></div>
+    </div>
+</div>

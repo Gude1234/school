@@ -1,0 +1,13 @@
+.mat-elevation-z8{
+    width: 90%;
+}
+
+p{
+    margin-bottom: 0px;
+}
+
+.xyz{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}

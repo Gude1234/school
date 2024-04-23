@@ -1,0 +1,23 @@
+<app-header (login1)="onLoginType($event)"></app-header>
+<div class="list-group-item">
+    <div class="home">
+        <div class="about">
+            <p style="font-size: 22px;font-weight: bold;color: rgb(44, 44, 119);">Welcome to the College Management Portal</p>
+            <ul style="text-align:justify;font-size: 16px;">
+                <li>Students, access your personalized dashboard to stay informed about courses, assignments, and campus events while engaging with peers and faculty members.</li>
+                &nbsp;
+                <li> Staff members, streamline your administrative tasks, manage course materials, and collaborate with colleagues to deliver top-quality education and support services.</li>
+                &nbsp;
+                <li>Administrators, leverage the portal's analytics and reporting tools to oversee enrollment, admissions, financial aid, and institutional effectiveness, guiding the strategic direction of our institution.</li>
+            </ul>
+        </div>
+        <div class="logo">
+            <img src="https://www.nitt.edu/home/about/High-Resolution-Emblem.png">
+        </div>
+        <div class="auth">
+            <app-studentlogin *ngIf="loginMode === 'student'"></app-studentlogin>
+            <app-stafflogin *ngIf="loginMode === 'staff'"></app-stafflogin>
+            <app-adminlogin *ngIf="loginMode === 'admin'"></app-adminlogin>
+        </div>
+    </div>
+</div>

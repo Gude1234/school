@@ -1,0 +1,42 @@
+.logo{
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+img{
+    height: 350px;
+    width: 350px;
+}
+
+.list-group-item{
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.about{
+    width: 500px;
+}
+
+.auth{
+    width: 400px;
+}

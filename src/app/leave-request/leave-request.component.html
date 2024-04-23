@@ -1,0 +1,48 @@
+<div class="box">
+    <div class="list-group-item">
+        <p style="font-size: 18px;font-weight: bold;">Leave Request</p>
+        &nbsp;
+        <form (ngSubmit)="onLeave()" #f="ngForm">
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="name">Name</label>
+                    <input id="name" class="form-control" name="name" [(ngModel)]="leaveRequest.name" required>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="type">Type</label>
+                    <input id="type" class="form-control" name="type" [(ngModel)]="leaveRequest.type" required>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="reason">Reason</label>
+                    <textarea id="reason" class="form-control" name="reason" [(ngModel)]="leaveRequest.description" required></textarea>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="from">From</label>
+                    <input id="from" class="form-control" name="from" type="date" [(ngModel)]="leaveRequest.fromDate" required>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="to">To</label>
+                    <input id="to" class="form-control" name="to" type="date" [(ngModel)]="leaveRequest.toDate" required>
+                </div>
+            </div>
+            &nbsp;
+            <div class="actions">
+                <div class="button-container">
+                    <button type="submit" class="btn-save" [disabled]="!f.valid">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
