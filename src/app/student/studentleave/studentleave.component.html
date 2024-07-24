@@ -1,0 +1,79 @@
+<div class="leavemanagement">
+    <div class="abc">
+      <div class="def">
+        <div class="list-group-item">
+          <div class="leaves1">
+            <p class="count" style="background-color: rgba(238, 241, 255, 1);color: rgba(85, 110, 230, 1);">{{totalleaves}}</p>
+            <p class="text">Total Leaves</p>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="leaves1">
+            <p class="count" style="background-color: rgba(238, 241, 255, 1);color: rgba(85, 110, 230, 1);">{{availableleaves}}</p>
+            <p class="text">Available Leaves</p>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="leaves1">
+            <p class="count" style="background-color: rgba(255, 244, 227, 1);color: rgba(255, 162, 24, 1);">{{pendingleaves}}</p>
+            <p class="text">Pending Leaves</p>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="leaves1">
+            <p class="count" style="background-color: rgba(255, 248, 248, 1);color: rgba(249, 60, 60, 1);">{{declinedleaves}}</p>
+            <p class="text">Declined Leaves</p>
+          </div>
+        </div>
+      </div>
+      <div class="table1">
+          <div class="header1">
+              <p style="font-size: 20px;font-weight: bold;">Leaves History</p>
+          </div>
+          &nbsp;
+          <div class="xyz">
+              <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="leaves">
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef> Type </th>
+                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="days">
+                    <th mat-header-cell *matHeaderCellDef> Days </th>
+                    <td mat-cell *matCellDef="let element"> {{element.days}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="fromDate">
+                    <th mat-header-cell *matHeaderCellDef> From Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.fromDate}} </td>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="toDate">
+                      <th mat-header-cell *matHeaderCellDef> To Date </th>
+                      <td mat-cell *matCellDef="let element"> {{element.toDate}} </td>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="description">
+                      <th mat-header-cell *matHeaderCellDef> Reason </th>
+                      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="status">
+                      <th mat-header-cell *matHeaderCellDef> Status </th>
+                      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                  </ng-container>
+            
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div> 
+          </div>
+      </div>
+    </div>
+  </div>>

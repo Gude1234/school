@@ -18,11 +18,11 @@
                 <span style="font-size: 50px;color: rgba(34, 141, 59, 1);"><i class="bi bi-bar-chart-fill"></i></span>
             </div>
         </a>
-        <a class="list-group-item" style="background-color: rgba(254, 193, 7, 1);">
+        <a class="list-group-item" style="background-color: rgba(254, 193, 7, 1);" (click)="onAttendence()">
             <div class="context">
                 <div class="content">
-                    <p>Total Leaves Taken</p>
-                    <p>{{registeredStudents.length}}</p>
+                    <p>Attendence History</p>
+                    <p>{{date.length}} Days</p>
                 </div>
                 <span style="font-size: 50px;color: rgba(217, 164, 6, 1);"><i class="bi bi-pie-chart-fill"></i></span>
             </div>

@@ -1,21 +1,50 @@
 <div class="studentHome">
     <div class="brief">
-        <a class="list-group-item" style="background-color: rgba(23, 162, 183, 1);">
-            <p>Total Subjects</p>
+        <a class="list-group-item" style="background-color: rgba(23, 162, 183, 1);" (click)="onAttendence()">
+            <div class="context">
+                <div class="content">
+                    <p>Total Attendence</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(19, 139, 156, 1);"><i class="bi bi-pie-chart-fill"></i></span>
+            </div>
         </a>
-        <a class="list-group-item" style="background-color: rgba(39, 168, 68, 1);">
-            <div>                
-                <p>Total Leaves Taken</p>
+        <a class="list-group-item" style="background-color: rgba(39, 168, 68, 1);" (click)="onLeave()">
+            <div class="context">
+                <div class="content">
+                    <p>Total Leaves Taken</p>
+                    <p>{{approvedLeaves}}</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(34, 141, 59, 1);"><i class="bi bi-bar-chart-fill"></i></span>
             </div>
         </a>
         <a class="list-group-item" style="background-color: rgba(254, 193, 7, 1);">
-            <p>Total Subjects</p>
+            <div class="context">
+                <div class="content">
+                    <p>Total Leaves Taken</p>
+                    <p>0</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(217, 164, 6, 1);"><i class="bi bi-pie-chart-fill"></i></span>
+            </div>
         </a>
         <a class="list-group-item" style="background-color: rgba(220, 53, 70, 1);" (click)="onSubjects()">
-            <p>Total Subjects</p>
+            <div class="context">
+                <div class="content">
+                    <p>Total Subjects</p>
+                    <p>{{registeredSubjects.length}}</p>
+                </div>
+                <span style="font-size: 50px;color: rgba(187, 45, 59, 1);"><i class="bi bi-pie-chart-fill"></i></span>
+            </div>
         </a>
     </div>
-    <div>
-
+    &nbsp;
+    <div class="charts">
+        <div class="bar">
+            <p style="font-size: 18px;font-weight: bold;">Attendence Statistics By Subjects</p>
+            <div id="barChart" style="width: 600px;height:400px;"></div>
+        </div>
+        <div class="bar">
+            <p style="font-size: 18px;font-weight: bold;">Leaves Statisitcs By Month</p>
+            <div id="leavebarChart" style="width: 600px;height:400px;"></div>
+        </div>
     </div>
 </div>

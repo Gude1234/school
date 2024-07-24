@@ -17,4 +17,12 @@ export class StudentService {
   GetStudentsbyId(id:number){
     return this.http.get(`http://localhost:5286/api/Students/${id}`)
   }
+
+  GetStudentFullDetails(){
+    return this.http.get('http://localhost:5286/api/Students/student/fulldetails')
+  }
+
+  GetStudentsbyCourse(courseid:number){
+    return this.http.get(`http://localhost:5286/api/Students/student/${courseid}`)
+  }
 }

@@ -5,6 +5,7 @@ import { CourseService } from 'src/app/Services/course.service';
 import { LeaveRequestService } from 'src/app/Services/leave-request.service';
 import { RegisteredsubjectsService } from 'src/app/Services/registeredsubjects.service';
 import { StaffService } from 'src/app/Services/staff.service';
+import { StudentattendenceService } from 'src/app/Services/studentattendence.service';
 import { SubjectService } from 'src/app/Services/subject.service';
 import { StudentsData } from 'src/app/Shared/studentsdata.model';
 
@@ -23,12 +24,21 @@ export class Home2Component implements OnInit{
   months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
   leavesdata: number[] = []
   approvedLeaves = 0
-
-
-  constructor(private router:Router,private route:ActivatedRoute, private subjectService:SubjectService,private staffService:StaffService, private registered:RegisteredsubjectsService, private courseService:CourseService, private leaveService:LeaveRequestService){}
+  date = []
+  attendences:any
+  constructor(private router:Router,private route:ActivatedRoute, private subjectService:SubjectService,private staffService:StaffService, private registered:RegisteredsubjectsService, private courseService:CourseService, private leaveService:LeaveRequestService,private attendenceService:StudentattendenceService){}
 
   ngOnInit(): void {
     this.staff = this.staffService.LoggedStaff
+    this.attendenceService.GetStudentAttendenceByStaff(this.staff['id']).subscribe(response => {
+      this.attendences = response
+      for(let i = 0;i<this.attendences.length;i++){
+        if(!this.date.includes(this.attendences[i]['date'])){
+          this.date.push(this.attendences[i]['date'])
+        }
+      }
+      console.log(this.date)
+    })
     this.subjectService.GetSubjectsbyStaff(this.staff['id']).subscribe(response => {
       this.subjects = response
     })
@@ -83,6 +93,10 @@ export class Home2Component implements OnInit{
 
   onLeave(){
     this.router.navigate(['leavemangement'],{relativeTo:this.route})
+  }
+
+  onAttendence(){
+    this.router.navigate(['attendencehistory'],{relativeTo:this.route})
   }
 
   renderstudents(data2:any){

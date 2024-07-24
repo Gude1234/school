@@ -30,3 +30,23 @@ p{
     justify-content: center;
 }
 
+table{
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+.data{
+    border-bottom: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+}
+
+.data1{
+    border-bottom: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+    font-weight: bold;
+    width: 30%;
+}
+

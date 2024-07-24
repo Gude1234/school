@@ -29,4 +29,8 @@ export class SideComponent implements OnInit{
     this.router.navigate(['/home'])
   }
 
+  onLeave(){
+    this.router.navigate(['/studenthome/leaverequest'])
+  }
+
 }

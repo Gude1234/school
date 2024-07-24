@@ -31,6 +31,18 @@ import { StudentsComponent } from './staff/students/students.component';
 import { StaffleaveComponent } from './staff/staffleave/staffleave.component';
 import { LeaveRequestComponent } from './leave-request/leave-request.component';
 import { StaffattendenceComponent } from './staff/staffattendence/staffattendence.component';
+import { StudentleaveComponent } from './student/studentleave/studentleave.component';
+import { AttendencehistoryComponent } from './staff/attendencehistory/attendencehistory.component';
+import { StudentattendencehistoryComponent } from './student/studentattendencehistory/studentattendencehistory.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AdminsideComponent } from './adminhome/adminside/adminside.component';
+import { AdminmainComponent } from './adminhome/adminmain/adminmain.component';
+import { Home3Component } from './admin/home3/home3.component';
+import { TotalcoursesComponent } from './admin/totalcourses/totalcourses.component';
+import { TotalsubjectsComponent } from './admin/totalsubjects/totalsubjects.component';
+import { TotalstudentsComponent } from './admin/totalstudents/totalstudents.component';
+import { TotalstaffComponent } from './admin/totalstaff/totalstaff.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -55,6 +67,17 @@ import { StaffattendenceComponent } from './staff/staffattendence/staffattendenc
     StaffleaveComponent,
     LeaveRequestComponent,
     StaffattendenceComponent,
+    StudentleaveComponent,
+    AttendencehistoryComponent,
+    StudentattendencehistoryComponent,
+    AdminhomeComponent,
+    AdminsideComponent,
+    AdminmainComponent,
+    Home3Component,
+    TotalcoursesComponent,
+    TotalsubjectsComponent,
+    TotalstudentsComponent,
+    TotalstaffComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +89,10 @@ import { StaffattendenceComponent } from './staff/staffattendence/staffattendenc
     HttpClientModule,
     MatTableModule,
     MatGridListModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

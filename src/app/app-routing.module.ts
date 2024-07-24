@@ -12,6 +12,15 @@ import { StudentsComponent } from "./staff/students/students.component";
 import { StaffleaveComponent } from "./staff/staffleave/staffleave.component";
 import { LeaveRequestComponent } from "./leave-request/leave-request.component";
 import { StaffattendenceComponent } from "./staff/staffattendence/staffattendence.component";
+import { StudentleaveComponent } from "./student/studentleave/studentleave.component";
+import { AttendencehistoryComponent } from "./staff/attendencehistory/attendencehistory.component";
+import { StudentattendencehistoryComponent } from "./student/studentattendencehistory/studentattendencehistory.component";
+import { AdminhomeComponent } from "./adminhome/adminhome.component";
+import { Home3Component } from "./admin/home3/home3.component";
+import { TotalstudentsComponent } from "./admin/totalstudents/totalstudents.component";
+import { TotalstaffComponent } from "./admin/totalstaff/totalstaff.component";
+import { TotalcoursesComponent } from "./admin/totalcourses/totalcourses.component";
+import { TotalsubjectsComponent } from "./admin/totalsubjects/totalsubjects.component";
 
 const routes:Routes = [
     {path:"home", component:HomeComponent},
@@ -19,7 +28,10 @@ const routes:Routes = [
     {path:"studenthome",component:StudenthomeComponent, children:[
         {path:"", component:Home1Component},
         {path:"registration", component:RegistrationComponent},
-        {path:"subjects",component:SubjectsComponent}
+        {path:"subjects",component:SubjectsComponent},
+        {path:"leaverequest",component:LeaveRequestComponent},
+        {path:"leavemangement", component:StudentleaveComponent},
+        {path:"attendencehistory", component:StudentattendencehistoryComponent}
     ]},
     {path:"staffhome",component:StaffhomeComponent,children:[
         {path:"",component:Home2Component},
@@ -27,7 +39,15 @@ const routes:Routes = [
         {path:"students",component:StudentsComponent},
         {path:"leavemangement", component:StaffleaveComponent},
         {path:"leaverequest",component:LeaveRequestComponent},
-        {path:"attendence",component:StaffattendenceComponent}
+        {path:"attendence",component:StaffattendenceComponent},
+        {path:"attendencehistory", component:AttendencehistoryComponent}
+    ]},
+    {path:"adminhome", component:AdminhomeComponent, children:[
+        {path:"", component:Home3Component},
+        {path:"students",component:TotalstudentsComponent},
+        {path:"staff",component:TotalstaffComponent},
+        {path:"courses",component:TotalcoursesComponent},
+        {path:"subjects",component:TotalsubjectsComponent}
     ]}
 ]
 

@@ -23,4 +23,8 @@ export class SubjectService {
   GetSubjectsbyStaff(id:number){
     return this.http.get(`http://localhost:5286/api/Subjects/staff/${id}`)
   }
+
+  GetSubjectsFullDetails(){
+    return this.http.get('http://localhost:5286/api/Subjects/subjects/fulldetails')
+  }
 }

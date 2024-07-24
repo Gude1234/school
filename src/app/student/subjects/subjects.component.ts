@@ -20,7 +20,7 @@ export class SubjectsComponent implements OnInit{
   
   ngOnInit(): void {
     this.student = this.studentService.LoggedStudent
-    this.registered.GetSubjectbyStudent(this.student['id']).subscribe(response => {
+    this.registered.GetSubjectbyStudent(this.student['name']).subscribe(response => {
       this.registeredSubjects = response
     })
     this.courseService.GetCoursebyId(this.student['course_Id']).subscribe(response => {

@@ -2,7 +2,7 @@
     <div class="content">
         <div class="date1">
             <label for="date">Select Date:</label>
-            <input id="date" class="form-control" type="date">
+            <input id="date" class="form-control" type="date" [(ngModel)]="attendence.date" required min="{{ minDate }}">
         </div>
         <div class="table1">
             <div class="header1">
@@ -45,9 +45,12 @@
                         <ng-container matColumnDef="actions">
                             <th mat-header-cell *matHeaderCellDef> Actions </th>
                             <td mat-cell *matCellDef="let element">
-                                <div class="buttons">
+                                <div class="buttons" *ngIf="!studentNames.includes(element['studentName'])">
                                     <button class="btn-save" (click)="markPresent(element)">Present</button>
                                     <button class="btn-cancel" (click)="markAbsent(element)">Absent</button>
+                                </div>
+                                <div class="text" *ngIf="studentNames.includes(element['studentName'])">
+                                    <p>Attendence Taken</p>
                                 </div>
                             </td>
                         </ng-container>

@@ -1,6 +1,6 @@
 <div class="subjects1">
     <div class="abc">
-      <div class="about">
+      <!-- <div class="about">
         <div class="item" style="font-weight: bold;">StudentId</div>
         <div class="item">{{student['rollNumber']}}</div>
         <div class="item" style="font-weight: bold;">StudentName</div>
@@ -9,7 +9,27 @@
         <div class="item">B.TECH</div>
         <div class="item" style="font-weight: bold;">Brancn</div>
         <div class="item">{{course['name']}}</div>
-      </div>
+      </div> -->
+      <table>
+        <tbody>
+          <tr>
+            <td class="data1">StudentId</td>
+            <td class="data">{{student['rollNumber']}}</td>
+          </tr>
+          <tr>
+            <td class="data1">StudentName</td>
+            <td class="data">{{student['name']}}</td>
+          </tr>
+          <tr>
+            <td class="data1">Course</td>
+            <td class="data">B.TECH</td>
+          </tr>
+          <tr>
+            <td class="data1">Branch</td>
+            <td class="data">{{course['name']}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     &nbsp;
     <div class="xyz">
@@ -22,12 +42,12 @@
       
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.subjectName}} </td>
           </ng-container>
       
           <ng-container matColumnDef="code">
             <th mat-header-cell *matHeaderCellDef> Subject Code </th>
-            <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.subjectCode}} </td>
           </ng-container>
       
           <ng-container matColumnDef="semester">
@@ -38,7 +58,7 @@
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-    </div> 
+      </div> 
     </div> 
 </div>
 
