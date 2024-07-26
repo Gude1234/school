@@ -1,0 +1,61 @@
+.leaveRequests{
+    padding: 20px;
+}
+
+.requesttitle{
+    padding: 10px;
+    background-color: rgba(53, 58, 64, 1);
+    color: white;
+}
+
+p{
+    margin-bottom: 0px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-save{
+    display: flex;
+    height: 44px;
+    padding: 8px 32px;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 32px;
+    color: white;
+    background: #285DD9;
+    border: 1px solid #285DD9;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.btn-cancel{
+    display: flex;
+    height: 44px;
+    padding: 8px 32px;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 32px;
+    color: #285DD9;
+    background: white;
+    border: 1px solid #285DD9;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.status-approved {
+    color: rgb(20, 223, 20);
+}
+
+.status-declined {
+    color: red;
+}

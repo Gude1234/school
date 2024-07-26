@@ -1,0 +1,28 @@
+<div class="addcourse">
+    <div class="coursefunction">
+        <p style="font-size: 18px;font-weight: bold;">Add Course</p>
+    </div>
+    <div class="list-group-item">
+        <form>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="name">Name</label>
+                    <input id="name" class="form-control" name="name" [(ngModel)]="course.name" required>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="type">Full Form</label>
+                    <input id="type" class="form-control" name="type" [(ngModel)]="course.fullForm" required>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="add">Add Course</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

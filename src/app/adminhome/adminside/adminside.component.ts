@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AdminService } from 'src/app/Services/admin.service';
+import { LeaveRequestService } from 'src/app/Services/leave-request.service';
 
 @Component({
   selector: 'app-adminside',
@@ -10,7 +11,7 @@ import { AdminService } from 'src/app/Services/admin.service';
 export class AdminsideComponent implements OnInit{
   admin:any
 
-  constructor(private router:Router, private adminService:AdminService){}
+  constructor(private router:Router, private route:ActivatedRoute,private adminService:AdminService, private leaveService:LeaveRequestService){}
 
   ngOnInit(): void {
     this.admin = this.adminService.LoggedAdmin
@@ -20,7 +21,18 @@ export class AdminsideComponent implements OnInit{
     this.router.navigate(["/adminhome"])
   }
 
-  onLeave(){}
+  onStaffLeave(){
+    this.leaveService.RequestCategory = "Staff"
+    this.router.navigate(['/adminhome/staffleaverequests'])
+  }
+  onStudentLeave(){
+    this.leaveService.RequestCategory = "Student"
+    this.router.navigate(['/adminhome/studentsleaverequests'])
+  }
+
+  AddCourse(){
+    this.router.navigate(['/adminhome/addcourse'])
+  }
 
   onAttendence(){}
 

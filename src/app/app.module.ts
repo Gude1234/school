@@ -43,6 +43,11 @@ import { TotalsubjectsComponent } from './admin/totalsubjects/totalsubjects.comp
 import { TotalstudentsComponent } from './admin/totalstudents/totalstudents.component';
 import { TotalstaffComponent } from './admin/totalstaff/totalstaff.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { LeaverequestsComponent } from './admin/leaverequests/leaverequests.component';
+import { AddstaffComponent } from './admin/addstaff/addstaff.component';
+import { AddstudentComponent } from './admin/addstudent/addstudent.component';
+import { AddcourseComponent } from './admin/addcourse/addcourse.component';
+import { AddsubjectComponent } from './admin/addsubject/addsubject.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +83,11 @@ import { NgxEchartsModule } from 'ngx-echarts';
     TotalsubjectsComponent,
     TotalstudentsComponent,
     TotalstaffComponent,
+    LeaverequestsComponent,
+    AddstaffComponent,
+    AddstudentComponent,
+    AddcourseComponent,
+    AddsubjectComponent,
   ],
   imports: [
     BrowserModule,

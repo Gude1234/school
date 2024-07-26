@@ -77,3 +77,11 @@ p{
     background-color: rgb(40, 40, 207);
     cursor: pointer;
 }
+
+.status-approved {
+    color: rgb(20, 223, 20);
+}
+
+.status-declined {
+    color: red;
+}

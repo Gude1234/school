@@ -21,6 +21,8 @@ import { TotalstudentsComponent } from "./admin/totalstudents/totalstudents.comp
 import { TotalstaffComponent } from "./admin/totalstaff/totalstaff.component";
 import { TotalcoursesComponent } from "./admin/totalcourses/totalcourses.component";
 import { TotalsubjectsComponent } from "./admin/totalsubjects/totalsubjects.component";
+import { LeaverequestsComponent } from "./admin/leaverequests/leaverequests.component";
+import { AddcourseComponent } from "./admin/addcourse/addcourse.component";
 
 const routes:Routes = [
     {path:"home", component:HomeComponent},
@@ -47,7 +49,10 @@ const routes:Routes = [
         {path:"students",component:TotalstudentsComponent},
         {path:"staff",component:TotalstaffComponent},
         {path:"courses",component:TotalcoursesComponent},
-        {path:"subjects",component:TotalsubjectsComponent}
+        {path:"subjects",component:TotalsubjectsComponent},
+        {path:"staffleaverequests", component:LeaverequestsComponent},
+        {path:"studentsleaverequests", component:LeaverequestsComponent},
+        {path:"addcourse",component:AddcourseComponent}
     ]}
 ]
 

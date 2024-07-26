@@ -1,0 +1,54 @@
+<div class="leaveRequests">
+    <div class="requesttitle">
+        <p style="font-size: 18px;font-weight: bold;">{{category}} Leave Requests</p>
+    </div>
+    <table mat-table [dataSource]="leaverequests" class="mat-elevation-z8">
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef> Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="reason">
+          <th mat-header-cell *matHeaderCellDef> Reason </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fromdate">
+            <th mat-header-cell *matHeaderCellDef> From Date  </th>
+            <td mat-cell *matCellDef="let element"> {{element.fromDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="todate">
+            <th mat-header-cell *matHeaderCellDef> To Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.toDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+                <div class="buttons" *ngIf="!status.includes(element['status'])">
+                    <button class="btn-save" (click)="Approve(element)">Approve</button>
+                    <button class="btn-cancel" (click)="Decline(element)">Decline</button>
+                </div>
+                <div class="text" *ngIf="status.includes(element['status'])">
+                    <p [ngClass]="{'status-approved': element.status === 'Approved', 'status-declined': element.status === 'Declined'}">
+                        {{element.status}}
+                    </p>
+                </div>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table> 
+</div>

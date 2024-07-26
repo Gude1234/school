@@ -1,3 +1,9 @@
 .students{
     padding: 20px;
 }
+
+.manage{
+    padding: 10px;
+    background-color: rgba(53, 58, 64, 1);
+    color: white;
+}
